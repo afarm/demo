@@ -1,5 +1,8 @@
 package com.example.demo;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Rs {
 
     private Integer code;

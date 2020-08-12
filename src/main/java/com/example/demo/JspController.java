@@ -2,11 +2,9 @@ package com.example.demo;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.boot.SpringApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -14,9 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @Controller
-public class ControllerTest {
+public class JspController {
 
-    private static final Logger LOG = LogManager.getLogger(ControllerTest.class);
+    private static final Logger LOG = LogManager.getLogger(JspController.class);
 
     @GetMapping(value = {"/page", "/"})
     ModelAndView test(Model model, @RequestParam(value = "name", required = false, defaultValue = "World") String name,
